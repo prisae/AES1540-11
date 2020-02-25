@@ -1,0 +1,118 @@
+%%fakesection ===    PACKAGES & DEFINITIONS    ===
+\documentclass[xcolor=svgnames, serif, 10pt]{beamer}
+\hypersetup{pdfpagelabels=false}
+
+\setbeameroption{hide notes}  % show notes; show only notes
+
+\usetheme{boxes}  % LOAD LASTLY, after color-, inner- & outertheme
+\usecolortheme{default} % default, beaver, crane, dove, seahorse, seagull
+\setbeamertemplate{items}[circle]
+\setbeamertemplate{enumerate items}[default]
+
+\beamertemplatenavigationsymbolsempty
+
+
+% tikz/pgf
+\usepackage{tikz}
+\usetikzlibrary{arrows,shapes}
+\tikzstyle{every picture}+=[remember picture]
+\everymath{\displaystyle}
+
+% --- PACKAGES ---
+\usepackage[UKenglish]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage[T1]{fontenc}
+\usepackage{epstopdf}
+\usepackage{tabularx}
+\usepackage{rotating}
+\usepackage{forloop}
+
+% own commands
+\newcommand{\mmcb}[1]{{\color{blue}#1}}
+\newcommand{\mmcr}[1]{{\color{red}#1}}
+\newcommand{\mmcg}[1]{{\color{green!40!black!}#1}}
+\definecolor{darkgreen}{rgb}{0.2,0.6,0.2}
+\newcommand{\mmco}[1]{{\color{brown!80!black!}#1}}
+
+\newcommand{\ftext}[1]{{\vspace{-.3cm}\tiny #1}}
+\newcommand{\flabel}[1]{{\vspace{-.3cm}\tiny \textcolor{gray}{#1}}}
+\newcommand{\nsmallskip}{~\\ \smallskip}
+\newcommand{\nmedskip}{~\\ \medskip}
+\newcommand{\nbigskip}{~\\ \bigskip}
+
+\newcommand{\mr}[1]{\mathrm{#1}}
+
+\newcommand{\vsp}{~\\[.3cm]}
+\newcommand{\Vsp}{~\\[1cm]}
+\newcommand{\lstsp}{\itemsep.3cm}
+\newcommand{\Lstsp}{\itemsep.6cm}
+
+\newcommand{\tbt}{\textbullet~}
+\newcommand{\bdra}{\ensuremath{\boldsymbol \Rightarrow }~}
+\newcommand{\dra}{\ensuremath{\Rightarrow }~}
+\newcommand{\rmk}[1]{{\sf\textbf{\color{red}{#1}}}}
+
+% graphicspath
+\graphicspath{{./figures/}}
+
+% \author is what appears in the lower right corner of every slide
+\author{AES1540-11}
+\title{Electromagnetic Exploration Methods}
+\date{15th November 2018}
+
+%%fakesection ===    DOCUMENT    ===
+\begin{document}
+
+
+% Create custom title page with [plain]
+\begin{frame}
+  \centering
+  {\color{DarkBlue}\Large \sffamily \bfseries EM - numerical modelling}
+
+  \raggedright
+  \vfill
+
+  \begin{block}{Python}
+    \begin{itemize}
+      \item \href{https://www.anaconda.com/distribution/\#download-section}%
+        {anaconda.org}
+      \item \href{https://jupyter.org}{jupyter.org}
+    \end{itemize}
+  \end{block}
+
+  \vfill
+
+  \begin{block}{SimPEG and GeoSci}
+    \begin{itemize}
+      \item \href{https://simpeg.xyz}{simpeg.xyz}
+        $\quad$ ($\Rightarrow$ \href{https://docs.simpeg.xyz}{docs.simpeg.xyz})
+      \item \href{https://geosci.xyz}{geosci.xyz}
+      \item \href{https://github.com/geoscixyz/em-apps}%
+        {github.com/geoscixyz/em-apps}
+    \end{itemize}
+  \end{block}
+
+  \vfill
+
+  \begin{block}{Other open-source python packages}
+    \begin{columns}
+      \begin{column}{0.5\linewidth}
+      \begin{itemize}
+          \item \href{https://empymod.github.io}{empymod.github.io}
+          \item \href{https://www.pygimli.org}{pygimli.org}
+          \item \href{https://custem.readthedocs.io}{custem.readthedocs.io}
+        \end{itemize}
+      \end{column}
+      \begin{column}{0.5\linewidth}
+      \begin{itemize}
+          \item \href{http://petgem.bsc.es}{petgem.bsc.es}
+          \item \href{https://www.fatiando.org}{fatiando.org}
+        \end{itemize}
+      \end{column}
+    \end{columns}
+  \end{block}
+
+\end{frame}
+
+\end{document}
